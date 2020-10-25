@@ -1,13 +1,70 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.headerTitle{
+  background-color: #424242;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+.todoButton-div{
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.todoButton{
+  padding: 10px;
+  background-color: white;
+  color: #00e6ff;
+  border: 1px solid #dedede;
+  font-size: 20px;
+}
+.todoButton:hover{
+  border: 1px solid #707070;
+}
+.todoButton:focus{
+  outline: none;
+  box-shadow: none;
+}
+.todos{
+  width: 95%;
+  margin: auto;
+}
+.todo{
+  padding: 4px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  display:flex;
+  
+}
+.todo:hover{
+  background-color: rgba(243, 243, 243, 0.712);
+}
+.todoTitle{
+  width: 25%;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+.todoDescription{
+  width: 52%;
+  text-align: center;
+  cursor: pointer;
+}
+.todoButtons{
+  width: 20%;
+  text-align: center;
+}
+.icon{
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #00e6ff;
+}
+.icon:hover{
+  color: #00ccff;
+  cursor: pointer;
 }
