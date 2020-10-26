@@ -6,7 +6,7 @@ const Todos = (props) => {
     return (
     <div className="todos"> {
     props.Todos.map((todo) => (
-        <Todo MarkComplete={props.MarkComplete} Completed={todo.completed} key={todo.id} todo={todo}></Todo>
+        <Todo EditTodo={props.EditTodo} DeleteTodo={props.DeleteTodo} MarkComplete={props.MarkComplete} Completed={todo.completed} key={todo.id} todo={todo}></Todo>
     ))
     }
     </div> 

@@ -8,7 +8,7 @@ export default class AddTodoButton extends Component {
             <div>
                 <div className="todoButton-div">
                     <button className="todoButton" data-toggle="modal" data-target="#exampleModal" ><i className="fas fa-plus"></i> Add Todo</button>
-                    <AddTodoModal></AddTodoModal>
+                    <AddTodoModal AddTodo={this.props.AddTodo}></AddTodoModal>
                 </div>
             </div>
         )

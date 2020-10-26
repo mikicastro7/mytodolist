@@ -43,10 +43,11 @@
   background-color: rgba(243, 243, 243, 0.712);
 }
 .todoTitle{
-  width: 25%;
-  text-align: center;
+  width: 23%;
   font-weight: bold;
   cursor: pointer;
+  text-align: center;
+  margin-left: 15px;
 }
 .todoDescription{
   width: 52%;
@@ -67,4 +68,15 @@
 .icon:hover{
   color: #00ccff;
   cursor: pointer;
+}
+.priority{
+  width: 24px;
+  height: 24px;
+  margin-right: 25px;
+  float: left;
+}
+.fullInfo{
+  padding: 10px 50px 10px 50px;
+  border: 1px solid grey;
+  border-radius: 4px;
 }
