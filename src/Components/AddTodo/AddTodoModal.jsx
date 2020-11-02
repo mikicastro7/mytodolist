@@ -13,7 +13,7 @@ export default class AddTodoModal extends Component {
 
     onSubmit = () => {
         this.props.AddTodo(this.state.title, this.state.description, this.state.priority);
-        this.setState({title: "", description: "", priority: ""})
+        this.setState({title: "", description: "", priority: "High"})
     }
 
     render() {
@@ -38,9 +38,9 @@ export default class AddTodoModal extends Component {
                                     <textarea onChange={this.fieldHandler} name="description" value={this.state.description} type="text" className="form-control" placeholder="Enter the decription of the todo"></textarea>
                                     <label>Priority</label>
                                     <select value={this.state.priority} onChange={this.fieldHandler} name="priority" className="form-control">
-                                        <option>High</option>
-                                        <option>Medium</option>
-                                        <option>Low</option>
+                                        <option value="High">High</option>
+                                        <option value="Medium">Medium</option>
+                                        <option value="Low">Low</option>
                                     </select>
                                     
                                 </div>
