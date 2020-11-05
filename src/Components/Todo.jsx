@@ -11,6 +11,12 @@ const Todo = (props) => {
     const limitChars = () => {
         return props.todo.description.length > 85 ? props.todo.description.substring(0, 85) + " ..." : props.todo.description
     }
+    const getDate = () => {
+        let dateSplit = props.todo.created_at.split("T")[0].split("-");
+        let date = dateSplit[2] + "/" + dateSplit[1] + "/" + dateSplit[0]
+        let timeSplit = props.todo.created_at.split("T")[1]
+        return date + " " + timeSplit.slice(0, 8)
+    }
 
     const priorityColor = () => {
         let color = ""; 
@@ -50,7 +56,7 @@ const Todo = (props) => {
                         <li><strong>Title: </strong>{props.todo.title}</li>
                         <li><strong>Description: </strong>{props.todo.description}</li>
                         <li><strong>Priority: </strong>{props.todo.priority}</li>
-                        <li><strong>Created at: </strong>{props.todo.creationdate + " " + props.todo.creationHour}</li>
+                        <li><strong>Created at: </strong>{getDate()}</li>
                     </ul>
                 </div>
             </div>

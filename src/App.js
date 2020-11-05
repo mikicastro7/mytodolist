@@ -12,11 +12,10 @@ export default class App extends Component {
 
   componentDidMount() {
     const config = {
-      headers: { Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjA4ZGM0NzQ0MzgyZjY5YzNlZDg4NzAxZWYxZWE0YTI1MjE5MjVlMTVmNmY4OWZkYTU1YmRmN2I5MjkwNzE0Y2MxNjg0ODU1ZGNkM2Y2MmMiLCJpYXQiOjE2MDQyNDMwNjIsIm5iZiI6MTYwNDI0MzA2MiwiZXhwIjoxNjM1Nzc5MDYyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.MEE9ijh0dooX9HnUY51FNpODnMTeeHu-Rfk68ZKaz3i1ZUGVGUXWy6SA9ZDBm5SwXAZKgQi5jCaski5ZKN9-ATofXPkuQMB-Ro8PJI2fBww4lr3GMR8KkRLiJRTLD8JiGPMg-Xw3dUxbpOSYq-UhODyD44XWAoZGRYEdHttS-JdnRd9N0EJfgcufouAfzeSwyjh3fqGDaSHs7d-RXc0PpPaLzvJ3JYBPBBXcLAWatf-CTH4CIFSzwjfRQwwJ0uQjDh4DWVGdfM2D_o7GorEry919tuVEV6B5J4GZb64hAjED0oQ1LPyY60-aDXFmkeY_PzJQIEa_6WpGtYj3yRDmyH8MKbBr2eX9rIMPE_DlAClaiW6N4GB6IsSfH5quCOeWBfaowuj48F2RRuj_PFtm9XjWCGy6eV-3ALeQ2B-qtwvjyFqeXb299zmD8KMhCbqQgSqqht7e6asP1nEJPH-MMyH3NJpFzA4ZkXcB506o8_If8kxVciPZjVyKJ3WROatgiNqKlbQ3J_BSw6EAgG88xbM22nzDb8qnElirxQxLx2gZJXkwSuMOyiqyz_jaj6O-ObBO2y1nPRt-_piu2apwfi4Npe27GIhRsDtUJCqZIBFaHPRrZ-kLO7yHNjxpq-2ZN8iMduq9HXFUJ307krhfxB0fT4tZsbCu1zjaNPYTQt4` }
+      headers: { Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTBjYWY2ZjUyMzhmMzQ4Y2FmODA5NGQ2NWYzMThkYzUxMWJlZmQzNzZjZThmYmEzMzFmNTEwMTc1YzgwM2ViZDRiOTI5NTAxNjdjZmZjODkiLCJpYXQiOjE2MDQ1OTc4MDMsIm5iZiI6MTYwNDU5NzgwMywiZXhwIjoxNjM2MTMzODAzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.rEviXxlYxVibXJiIL8KItssjdE5rlHvBWKhbLO4Jr1jOiS1_B21lYnXThG7ASUgGW21lkkqoOvVgxM48CU63xpuoUrfZKx-kqcv_k4Y-64gR5gjRiolPKVbo4CCykcuVCWLC7sw8kFtsmnv2Mu1GBJSgLh3YmbRVedAgQ50fKcbl_rax5Hd5FYBKiv3xH7STa2yyPv25uF_VBxSfWKQEn8BY-dnh2XxyrjQV65DBN3tzhFGliSXHyMhxhEmci4BpgZz8OWDTJ3-dRoRrMLTX3VGgVA39oaGu_xUIqtLCqDLS4iVLQCMRHBHx9u4TZuDeWkOm3go-Ksuxg5uVRjL6iQpdLxQ4s375w-mWxptt0j5GZhS4Scd_cwKKcGs0Pwciuvs0_dtlGH2YOE9aC4FVVcXEzLnpBVkab-qOJ9KzC-0HUvUCmm--GUlwmV4uuH10T8urasgoaGKEywwdoq6BL8_2r9FLXVJbItLpEk3DLQ0eCLO_Az16YZfQIUdzbtPTA43rjw7leHKywyhHhdNHDlrOFcW5_JmnNKMy1C6P0cCeLiCZC128-UC4-lcnTLPas0KVFyoQjDSHspSonv1VUWaJ58P_rYD09ITtQMtZYGoXn2-gAFszlmvmW6Tln2482zC7C_TN9rk6YsvnJiy9NGSvtZqgzJsHzxuDMqbiFVU` }
     }
-    Axios.get('http://api.com/api/userTodos', config)
+    Axios.get('http://laravel-api.miquelcastro.com/api/userTodos', config)
       .then(response => {
-        console.log(response);
         this.setState({todos : response.data.todo})
       })
   }
@@ -27,9 +26,9 @@ export default class App extends Component {
         if(todo.id === id){
           
           Axios({
-            headers: { Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjA4ZGM0NzQ0MzgyZjY5YzNlZDg4NzAxZWYxZWE0YTI1MjE5MjVlMTVmNmY4OWZkYTU1YmRmN2I5MjkwNzE0Y2MxNjg0ODU1ZGNkM2Y2MmMiLCJpYXQiOjE2MDQyNDMwNjIsIm5iZiI6MTYwNDI0MzA2MiwiZXhwIjoxNjM1Nzc5MDYyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.MEE9ijh0dooX9HnUY51FNpODnMTeeHu-Rfk68ZKaz3i1ZUGVGUXWy6SA9ZDBm5SwXAZKgQi5jCaski5ZKN9-ATofXPkuQMB-Ro8PJI2fBww4lr3GMR8KkRLiJRTLD8JiGPMg-Xw3dUxbpOSYq-UhODyD44XWAoZGRYEdHttS-JdnRd9N0EJfgcufouAfzeSwyjh3fqGDaSHs7d-RXc0PpPaLzvJ3JYBPBBXcLAWatf-CTH4CIFSzwjfRQwwJ0uQjDh4DWVGdfM2D_o7GorEry919tuVEV6B5J4GZb64hAjED0oQ1LPyY60-aDXFmkeY_PzJQIEa_6WpGtYj3yRDmyH8MKbBr2eX9rIMPE_DlAClaiW6N4GB6IsSfH5quCOeWBfaowuj48F2RRuj_PFtm9XjWCGy6eV-3ALeQ2B-qtwvjyFqeXb299zmD8KMhCbqQgSqqht7e6asP1nEJPH-MMyH3NJpFzA4ZkXcB506o8_If8kxVciPZjVyKJ3WROatgiNqKlbQ3J_BSw6EAgG88xbM22nzDb8qnElirxQxLx2gZJXkwSuMOyiqyz_jaj6O-ObBO2y1nPRt-_piu2apwfi4Npe27GIhRsDtUJCqZIBFaHPRrZ-kLO7yHNjxpq-2ZN8iMduq9HXFUJ307krhfxB0fT4tZsbCu1zjaNPYTQt4` },
+            headers: { Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTBjYWY2ZjUyMzhmMzQ4Y2FmODA5NGQ2NWYzMThkYzUxMWJlZmQzNzZjZThmYmEzMzFmNTEwMTc1YzgwM2ViZDRiOTI5NTAxNjdjZmZjODkiLCJpYXQiOjE2MDQ1OTc4MDMsIm5iZiI6MTYwNDU5NzgwMywiZXhwIjoxNjM2MTMzODAzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.rEviXxlYxVibXJiIL8KItssjdE5rlHvBWKhbLO4Jr1jOiS1_B21lYnXThG7ASUgGW21lkkqoOvVgxM48CU63xpuoUrfZKx-kqcv_k4Y-64gR5gjRiolPKVbo4CCykcuVCWLC7sw8kFtsmnv2Mu1GBJSgLh3YmbRVedAgQ50fKcbl_rax5Hd5FYBKiv3xH7STa2yyPv25uF_VBxSfWKQEn8BY-dnh2XxyrjQV65DBN3tzhFGliSXHyMhxhEmci4BpgZz8OWDTJ3-dRoRrMLTX3VGgVA39oaGu_xUIqtLCqDLS4iVLQCMRHBHx9u4TZuDeWkOm3go-Ksuxg5uVRjL6iQpdLxQ4s375w-mWxptt0j5GZhS4Scd_cwKKcGs0Pwciuvs0_dtlGH2YOE9aC4FVVcXEzLnpBVkab-qOJ9KzC-0HUvUCmm--GUlwmV4uuH10T8urasgoaGKEywwdoq6BL8_2r9FLXVJbItLpEk3DLQ0eCLO_Az16YZfQIUdzbtPTA43rjw7leHKywyhHhdNHDlrOFcW5_JmnNKMy1C6P0cCeLiCZC128-UC4-lcnTLPas0KVFyoQjDSHspSonv1VUWaJ58P_rYD09ITtQMtZYGoXn2-gAFszlmvmW6Tln2482zC7C_TN9rk6YsvnJiy9NGSvtZqgzJsHzxuDMqbiFVU` },
             method: 'patch',
-            url: 'http://api.com/api/todo/' + id,
+            url: 'http://laravel-api.miquelcastro.com/api/todo/' + id,
             data: {
               completed : !todo.completed
             }
@@ -46,9 +45,9 @@ export default class App extends Component {
       todos: this.state.todos.map(todo => {
         if(todo.id === id){
           Axios({
-            headers: { Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjA4ZGM0NzQ0MzgyZjY5YzNlZDg4NzAxZWYxZWE0YTI1MjE5MjVlMTVmNmY4OWZkYTU1YmRmN2I5MjkwNzE0Y2MxNjg0ODU1ZGNkM2Y2MmMiLCJpYXQiOjE2MDQyNDMwNjIsIm5iZiI6MTYwNDI0MzA2MiwiZXhwIjoxNjM1Nzc5MDYyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.MEE9ijh0dooX9HnUY51FNpODnMTeeHu-Rfk68ZKaz3i1ZUGVGUXWy6SA9ZDBm5SwXAZKgQi5jCaski5ZKN9-ATofXPkuQMB-Ro8PJI2fBww4lr3GMR8KkRLiJRTLD8JiGPMg-Xw3dUxbpOSYq-UhODyD44XWAoZGRYEdHttS-JdnRd9N0EJfgcufouAfzeSwyjh3fqGDaSHs7d-RXc0PpPaLzvJ3JYBPBBXcLAWatf-CTH4CIFSzwjfRQwwJ0uQjDh4DWVGdfM2D_o7GorEry919tuVEV6B5J4GZb64hAjED0oQ1LPyY60-aDXFmkeY_PzJQIEa_6WpGtYj3yRDmyH8MKbBr2eX9rIMPE_DlAClaiW6N4GB6IsSfH5quCOeWBfaowuj48F2RRuj_PFtm9XjWCGy6eV-3ALeQ2B-qtwvjyFqeXb299zmD8KMhCbqQgSqqht7e6asP1nEJPH-MMyH3NJpFzA4ZkXcB506o8_If8kxVciPZjVyKJ3WROatgiNqKlbQ3J_BSw6EAgG88xbM22nzDb8qnElirxQxLx2gZJXkwSuMOyiqyz_jaj6O-ObBO2y1nPRt-_piu2apwfi4Npe27GIhRsDtUJCqZIBFaHPRrZ-kLO7yHNjxpq-2ZN8iMduq9HXFUJ307krhfxB0fT4tZsbCu1zjaNPYTQt4` },
+            headers: { Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTBjYWY2ZjUyMzhmMzQ4Y2FmODA5NGQ2NWYzMThkYzUxMWJlZmQzNzZjZThmYmEzMzFmNTEwMTc1YzgwM2ViZDRiOTI5NTAxNjdjZmZjODkiLCJpYXQiOjE2MDQ1OTc4MDMsIm5iZiI6MTYwNDU5NzgwMywiZXhwIjoxNjM2MTMzODAzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.rEviXxlYxVibXJiIL8KItssjdE5rlHvBWKhbLO4Jr1jOiS1_B21lYnXThG7ASUgGW21lkkqoOvVgxM48CU63xpuoUrfZKx-kqcv_k4Y-64gR5gjRiolPKVbo4CCykcuVCWLC7sw8kFtsmnv2Mu1GBJSgLh3YmbRVedAgQ50fKcbl_rax5Hd5FYBKiv3xH7STa2yyPv25uF_VBxSfWKQEn8BY-dnh2XxyrjQV65DBN3tzhFGliSXHyMhxhEmci4BpgZz8OWDTJ3-dRoRrMLTX3VGgVA39oaGu_xUIqtLCqDLS4iVLQCMRHBHx9u4TZuDeWkOm3go-Ksuxg5uVRjL6iQpdLxQ4s375w-mWxptt0j5GZhS4Scd_cwKKcGs0Pwciuvs0_dtlGH2YOE9aC4FVVcXEzLnpBVkab-qOJ9KzC-0HUvUCmm--GUlwmV4uuH10T8urasgoaGKEywwdoq6BL8_2r9FLXVJbItLpEk3DLQ0eCLO_Az16YZfQIUdzbtPTA43rjw7leHKywyhHhdNHDlrOFcW5_JmnNKMy1C6P0cCeLiCZC128-UC4-lcnTLPas0KVFyoQjDSHspSonv1VUWaJ58P_rYD09ITtQMtZYGoXn2-gAFszlmvmW6Tln2482zC7C_TN9rk6YsvnJiy9NGSvtZqgzJsHzxuDMqbiFVU` },
             method: 'patch',
-            url: 'http://api.com/api/todo/' + id,
+            url: 'http://laravel-api.miquelcastro.com/api/todo/' + id,
             data: {
               title : title,
               description : description,
@@ -71,9 +70,9 @@ export default class App extends Component {
       )
     })
     const config = {
-      headers: { Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjA4ZGM0NzQ0MzgyZjY5YzNlZDg4NzAxZWYxZWE0YTI1MjE5MjVlMTVmNmY4OWZkYTU1YmRmN2I5MjkwNzE0Y2MxNjg0ODU1ZGNkM2Y2MmMiLCJpYXQiOjE2MDQyNDMwNjIsIm5iZiI6MTYwNDI0MzA2MiwiZXhwIjoxNjM1Nzc5MDYyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.MEE9ijh0dooX9HnUY51FNpODnMTeeHu-Rfk68ZKaz3i1ZUGVGUXWy6SA9ZDBm5SwXAZKgQi5jCaski5ZKN9-ATofXPkuQMB-Ro8PJI2fBww4lr3GMR8KkRLiJRTLD8JiGPMg-Xw3dUxbpOSYq-UhODyD44XWAoZGRYEdHttS-JdnRd9N0EJfgcufouAfzeSwyjh3fqGDaSHs7d-RXc0PpPaLzvJ3JYBPBBXcLAWatf-CTH4CIFSzwjfRQwwJ0uQjDh4DWVGdfM2D_o7GorEry919tuVEV6B5J4GZb64hAjED0oQ1LPyY60-aDXFmkeY_PzJQIEa_6WpGtYj3yRDmyH8MKbBr2eX9rIMPE_DlAClaiW6N4GB6IsSfH5quCOeWBfaowuj48F2RRuj_PFtm9XjWCGy6eV-3ALeQ2B-qtwvjyFqeXb299zmD8KMhCbqQgSqqht7e6asP1nEJPH-MMyH3NJpFzA4ZkXcB506o8_If8kxVciPZjVyKJ3WROatgiNqKlbQ3J_BSw6EAgG88xbM22nzDb8qnElirxQxLx2gZJXkwSuMOyiqyz_jaj6O-ObBO2y1nPRt-_piu2apwfi4Npe27GIhRsDtUJCqZIBFaHPRrZ-kLO7yHNjxpq-2ZN8iMduq9HXFUJ307krhfxB0fT4tZsbCu1zjaNPYTQt4` }
+      headers: { Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTBjYWY2ZjUyMzhmMzQ4Y2FmODA5NGQ2NWYzMThkYzUxMWJlZmQzNzZjZThmYmEzMzFmNTEwMTc1YzgwM2ViZDRiOTI5NTAxNjdjZmZjODkiLCJpYXQiOjE2MDQ1OTc4MDMsIm5iZiI6MTYwNDU5NzgwMywiZXhwIjoxNjM2MTMzODAzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.rEviXxlYxVibXJiIL8KItssjdE5rlHvBWKhbLO4Jr1jOiS1_B21lYnXThG7ASUgGW21lkkqoOvVgxM48CU63xpuoUrfZKx-kqcv_k4Y-64gR5gjRiolPKVbo4CCykcuVCWLC7sw8kFtsmnv2Mu1GBJSgLh3YmbRVedAgQ50fKcbl_rax5Hd5FYBKiv3xH7STa2yyPv25uF_VBxSfWKQEn8BY-dnh2XxyrjQV65DBN3tzhFGliSXHyMhxhEmci4BpgZz8OWDTJ3-dRoRrMLTX3VGgVA39oaGu_xUIqtLCqDLS4iVLQCMRHBHx9u4TZuDeWkOm3go-Ksuxg5uVRjL6iQpdLxQ4s375w-mWxptt0j5GZhS4Scd_cwKKcGs0Pwciuvs0_dtlGH2YOE9aC4FVVcXEzLnpBVkab-qOJ9KzC-0HUvUCmm--GUlwmV4uuH10T8urasgoaGKEywwdoq6BL8_2r9FLXVJbItLpEk3DLQ0eCLO_Az16YZfQIUdzbtPTA43rjw7leHKywyhHhdNHDlrOFcW5_JmnNKMy1C6P0cCeLiCZC128-UC4-lcnTLPas0KVFyoQjDSHspSonv1VUWaJ58P_rYD09ITtQMtZYGoXn2-gAFszlmvmW6Tln2482zC7C_TN9rk6YsvnJiy9NGSvtZqgzJsHzxuDMqbiFVU` }
     }
-    Axios.delete('http://api.com/api/todo/' + id, config)
+    Axios.delete('http://laravel-api.miquelcastro.com/api/todo/' + id, config)
 
   }
 
@@ -100,9 +99,9 @@ export default class App extends Component {
 
   addTodo = (title, description, priority) => {
     Axios({
-      headers: { Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjA4ZGM0NzQ0MzgyZjY5YzNlZDg4NzAxZWYxZWE0YTI1MjE5MjVlMTVmNmY4OWZkYTU1YmRmN2I5MjkwNzE0Y2MxNjg0ODU1ZGNkM2Y2MmMiLCJpYXQiOjE2MDQyNDMwNjIsIm5iZiI6MTYwNDI0MzA2MiwiZXhwIjoxNjM1Nzc5MDYyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.MEE9ijh0dooX9HnUY51FNpODnMTeeHu-Rfk68ZKaz3i1ZUGVGUXWy6SA9ZDBm5SwXAZKgQi5jCaski5ZKN9-ATofXPkuQMB-Ro8PJI2fBww4lr3GMR8KkRLiJRTLD8JiGPMg-Xw3dUxbpOSYq-UhODyD44XWAoZGRYEdHttS-JdnRd9N0EJfgcufouAfzeSwyjh3fqGDaSHs7d-RXc0PpPaLzvJ3JYBPBBXcLAWatf-CTH4CIFSzwjfRQwwJ0uQjDh4DWVGdfM2D_o7GorEry919tuVEV6B5J4GZb64hAjED0oQ1LPyY60-aDXFmkeY_PzJQIEa_6WpGtYj3yRDmyH8MKbBr2eX9rIMPE_DlAClaiW6N4GB6IsSfH5quCOeWBfaowuj48F2RRuj_PFtm9XjWCGy6eV-3ALeQ2B-qtwvjyFqeXb299zmD8KMhCbqQgSqqht7e6asP1nEJPH-MMyH3NJpFzA4ZkXcB506o8_If8kxVciPZjVyKJ3WROatgiNqKlbQ3J_BSw6EAgG88xbM22nzDb8qnElirxQxLx2gZJXkwSuMOyiqyz_jaj6O-ObBO2y1nPRt-_piu2apwfi4Npe27GIhRsDtUJCqZIBFaHPRrZ-kLO7yHNjxpq-2ZN8iMduq9HXFUJ307krhfxB0fT4tZsbCu1zjaNPYTQt4` },
+      headers: { Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTBjYWY2ZjUyMzhmMzQ4Y2FmODA5NGQ2NWYzMThkYzUxMWJlZmQzNzZjZThmYmEzMzFmNTEwMTc1YzgwM2ViZDRiOTI5NTAxNjdjZmZjODkiLCJpYXQiOjE2MDQ1OTc4MDMsIm5iZiI6MTYwNDU5NzgwMywiZXhwIjoxNjM2MTMzODAzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.rEviXxlYxVibXJiIL8KItssjdE5rlHvBWKhbLO4Jr1jOiS1_B21lYnXThG7ASUgGW21lkkqoOvVgxM48CU63xpuoUrfZKx-kqcv_k4Y-64gR5gjRiolPKVbo4CCykcuVCWLC7sw8kFtsmnv2Mu1GBJSgLh3YmbRVedAgQ50fKcbl_rax5Hd5FYBKiv3xH7STa2yyPv25uF_VBxSfWKQEn8BY-dnh2XxyrjQV65DBN3tzhFGliSXHyMhxhEmci4BpgZz8OWDTJ3-dRoRrMLTX3VGgVA39oaGu_xUIqtLCqDLS4iVLQCMRHBHx9u4TZuDeWkOm3go-Ksuxg5uVRjL6iQpdLxQ4s375w-mWxptt0j5GZhS4Scd_cwKKcGs0Pwciuvs0_dtlGH2YOE9aC4FVVcXEzLnpBVkab-qOJ9KzC-0HUvUCmm--GUlwmV4uuH10T8urasgoaGKEywwdoq6BL8_2r9FLXVJbItLpEk3DLQ0eCLO_Az16YZfQIUdzbtPTA43rjw7leHKywyhHhdNHDlrOFcW5_JmnNKMy1C6P0cCeLiCZC128-UC4-lcnTLPas0KVFyoQjDSHspSonv1VUWaJ58P_rYD09ITtQMtZYGoXn2-gAFszlmvmW6Tln2482zC7C_TN9rk6YsvnJiy9NGSvtZqgzJsHzxuDMqbiFVU` },
       method: 'post',
-      url: 'http://api.com/api/todo',
+      url: 'http://laravel-api.miquelcastro.com/api/todo',
       data: {
         title : title,
         description : description,
@@ -115,8 +114,8 @@ export default class App extends Component {
         title: title,
         description: description,
         priority: priority,
-        completed: false
-        
+        completed: false,
+        created_at : response.data.todo.created_at
       }
       this.setState({
         todos : [...this.state.todos, newTodo]
