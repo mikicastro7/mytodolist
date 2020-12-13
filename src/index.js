@@ -2,6 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Axios from 'axios';
+
+Axios.defaults.baseURL = 'http://laravel-api.miquelcastro.com/api/';
+Axios.defaults.headers.common['Authorization'] = 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTBjYWY2ZjUyMzhmMzQ4Y2FmODA5NGQ2NWYzMThkYzUxMWJlZmQzNzZjZThmYmEzMzFmNTEwMTc1YzgwM2ViZDRiOTI5NTAxNjdjZmZjODkiLCJpYXQiOjE2MDQ1OTc4MDMsIm5iZiI6MTYwNDU5NzgwMywiZXhwIjoxNjM2MTMzODAzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.rEviXxlYxVibXJiIL8KItssjdE5rlHvBWKhbLO4Jr1jOiS1_B21lYnXThG7ASUgGW21lkkqoOvVgxM48CU63xpuoUrfZKx-kqcv_k4Y-64gR5gjRiolPKVbo4CCykcuVCWLC7sw8kFtsmnv2Mu1GBJSgLh3YmbRVedAgQ50fKcbl_rax5Hd5FYBKiv3xH7STa2yyPv25uF_VBxSfWKQEn8BY-dnh2XxyrjQV65DBN3tzhFGliSXHyMhxhEmci4BpgZz8OWDTJ3-dRoRrMLTX3VGgVA39oaGu_xUIqtLCqDLS4iVLQCMRHBHx9u4TZuDeWkOm3go-Ksuxg5uVRjL6iQpdLxQ4s375w-mWxptt0j5GZhS4Scd_cwKKcGs0Pwciuvs0_dtlGH2YOE9aC4FVVcXEzLnpBVkab-qOJ9KzC-0HUvUCmm--GUlwmV4uuH10T8urasgoaGKEywwdoq6BL8_2r9FLXVJbItLpEk3DLQ0eCLO_Az16YZfQIUdzbtPTA43rjw7leHKywyhHhdNHDlrOFcW5_JmnNKMy1C6P0cCeLiCZC128-UC4-lcnTLPas0KVFyoQjDSHspSonv1VUWaJ58P_rYD09ITtQMtZYGoXn2-gAFszlmvmW6Tln2482zC7C_TN9rk6YsvnJiy9NGSvtZqgzJsHzxuDMqbiFVU';
+Axios.defaults.headers.post['Content-Type'] = 'application/json';
 
 ReactDOM.render(
     <App />,
